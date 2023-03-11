@@ -35,11 +35,6 @@ public sealed class ObjectContext<TObject> : IObjectContext<TObject> where TObje
     }
     #endregion
 
-    //static public Action<TObject, object> CreateSetPropertyDelegate<TClass, object>(this PropertyInfo propertyInfo)
-    //{
-    //    return (Action<TClass, TProperty>)Delegate.CreateDelegate(typeof(Action<TClass, TProperty>), propertyInfo.GetSetMethod());
-    //}
-
     #region Get property
     /// <summary>
     /// Gets cached object property.

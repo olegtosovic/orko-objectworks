@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orko.ObjectWorks", "Orko.ObjectWorks.csproj", "{F0CC7CAC-FC92-4B1F-AD80-D330F160AFF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orko.Usage", "..\Orko.Usage\Orko.Usage.csproj", "{65E68916-D67A-4748-84B0-4AC2B6A49E65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F0CC7CAC-FC92-4B1F-AD80-D330F160AFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0CC7CAC-FC92-4B1F-AD80-D330F160AFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0CC7CAC-FC92-4B1F-AD80-D330F160AFF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65E68916-D67A-4748-84B0-4AC2B6A49E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65E68916-D67A-4748-84B0-4AC2B6A49E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65E68916-D67A-4748-84B0-4AC2B6A49E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65E68916-D67A-4748-84B0-4AC2B6A49E65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
