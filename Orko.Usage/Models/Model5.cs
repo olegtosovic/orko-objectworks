@@ -12,8 +12,8 @@ namespace Orko.Usage.Models
     public class Model5
     {
         public int? Id { get; set; }
+        public string? Guid { get; set; }
         public string? Name { get; set; }
-        public string? Description { get; set; }
         public string? Type { get; set; }
         public DateTime? ChangedDate { get; set; }
     }
