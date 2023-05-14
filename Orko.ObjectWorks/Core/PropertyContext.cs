@@ -17,8 +17,6 @@ public class PropertyContext<TObject> : IPropertyContext<TObject> where TObject 
     private ReadOnlyCollection<Attribute> _attributeCollection = null!;
     private Func<TObject, object?> _propertyGetter = null!;
     private Action<TObject, object?> _propertySetter = null!;
-    private MethodInfo _propertyGetMethod = null!;
-    private MethodInfo _propertySetMethod = null!;
     #endregion
 
     #region Constructors
@@ -66,7 +64,7 @@ public class PropertyContext<TObject> : IPropertyContext<TObject> where TObject 
     /// </summary>
     public void SetValue(TObject instance, object? value)
     {
-        _propertySetMethod.Invoke(instance, new object[] { value! });
+        _propertyInfo.SetValue(instance, new object[] { value! });
     }
     /// <summary>
     /// Gets property value.
@@ -129,7 +127,7 @@ public class PropertyContext<TObject> : IPropertyContext<TObject> where TObject 
     private void CacheGet()
     {
         // Get GetMethod method info via reflection.
-        _propertyGetMethod = _propertyInfo!.GetGetMethod()!;
+        var _propertyGetMethod = _propertyInfo!.GetGetMethod()!;
 
         // Create parameter expression.
         ParameterExpression instanceExpression = Expression.Parameter(typeof(TObject));
@@ -156,7 +154,7 @@ public class PropertyContext<TObject> : IPropertyContext<TObject> where TObject 
     private void CacheSet()
     {
         // Get SetMethod method info via reflection.
-        _propertySetMethod = _propertyInfo!.GetSetMethod(true)!;
+        var _propertySetMethod = _propertyInfo!.GetSetMethod(true)!;
 
         // Create parameter expression for instance.
         ParameterExpression instanceExpression = Expression.Parameter(_propertyInfo!.DeclaringType!);
